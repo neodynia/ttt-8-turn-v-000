@@ -12,8 +12,15 @@ def input_to_index(input)
 end
 
 def valid_move?(board,index)
-  if board[index]==" "||board[index]==""||board[index]==nil && index.between(0,8)
+  if index.between?(0,8) && position_taken?(board,index)==false
     return true
+  else
+  end
+end
+
+def position_taken?(board,index)
+  if board[index]==" "||board[index]==""||board[index]==nil
+    return false
   else
   end
 end
