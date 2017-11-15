@@ -1,4 +1,3 @@
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "----------"
@@ -8,7 +7,7 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  "#{input}".to_i - 1
+  '#{input}'.to_i - 1
 end
 
 def valid_move?(board,index)
@@ -21,6 +20,22 @@ end
 def position_taken?(board,index)
   if board[index]==" "||board[index]==""||board[index]==nil
     return false
+  else
+  end
+end
+
+def move (board,index,char="X")
+  board[index] = char
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  gets.strip
+  input_to_index(input)
+  if
+    position_taken?(board,index)==false && valid_move?(board,index)==true
+    move(board,index,char="X")
+    display_board(board)
   else
   end
 end
